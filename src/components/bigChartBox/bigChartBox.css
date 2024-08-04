@@ -1,0 +1,9 @@
+.bigChartBox{
+    width: 100%;
+    padding: 20px;
+}
+
+.bigChartBox h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
