@@ -1,12 +1,12 @@
 import React from 'react'
 import './menu.css';
-import { IoIosHome } from 'react-icons/io';
+import { IoIosHome, IoMdGift } from 'react-icons/io';
 import './menu.css'
 import { Link } from 'react-router-dom';
 import { FaRegUser,FaUsers } from 'react-icons/fa';
 
 
-const Menu = () => {
+const Menu = ({setOpen}) => {
 
     const menu = [
         {
@@ -34,21 +34,21 @@ const Menu = () => {
                 {
                     id: 1,
                     title: "Users",
-                    url: '/',
+                    url: '/users',
                     icon: <FaUsers />
                 },
                 {
                     id: 2,
                     title: "Products",
-                    url: '/',
-                    icon: <FaRegUser />
+                    url: '/products',
+                    icon: <IoMdGift />
                 }
             ]
         }
     ];
     
     return (
-        <div className='menu'>
+        <div className={`menu`}>
 
             {
                 menu.map((item, index) => (
@@ -56,7 +56,7 @@ const Menu = () => {
                         <span className='title'>{item.title}</span>
                         {
                             item.listItems.map((listItem, i) => (
-                                <Link className='listitem' key={i} to="/">
+                                <Link className='listitem' key={i} onClick={() => setOpen(false)} to={listItem.url}>
                                     {listItem.icon} 
                                     <span className='listitem-title'>{listItem.title}</span>
                                 </Link>

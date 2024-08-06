@@ -52,7 +52,7 @@ const BarChartbox = ({title,color}) => {
         <div className='bar-chartBox'>
             <h1>{title}</h1>
             <div className="chart">
-                <ResponsiveContainer width="99%" height={150}>
+                <ResponsiveContainer width="99%" height={200}>
                     <BarChart width={150}  height={40} data={data}>
                         <Tooltip contentStyle={{ background: "#2a3447", borderRadius: "5px" }} labelStyle={{ display: "none" }} cursor={{fill:"none"}} />
                         <Bar dataKey="uv" fill={color} />

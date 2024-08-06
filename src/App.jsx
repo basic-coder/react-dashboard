@@ -7,17 +7,20 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Menu from './components/menu/Menu'
 import Login from './pages/login/Login'
+import { useState } from 'react'
 
 function App() {
   const Layout = () => {
+
+    const [open, setOpen] = useState(false)
+
     return (
     <div className='main'>
-      <Navbar />
+      <Navbar setOpen={setOpen} open={open}/>
       <div className="container">
-        <div className="menu-container">
-          <Menu />
+        <div className={`menu-container ${open ? 'open-menu' : ''}`}>
+          <Menu setOpen={setOpen} />
         </div>
-     
       <div className="content-container">
       <Outlet />
       </div>

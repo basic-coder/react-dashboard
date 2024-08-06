@@ -1,14 +1,22 @@
 import React from 'react'
-import { FaCog, FaRegUser } from 'react-icons/fa';
+import { FaBars, FaCog, FaRegUser } from 'react-icons/fa';
 import { IoIosNotifications, IoIosSearch } from "react-icons/io";
 import './navbar.css'
+import { IoClose } from 'react-icons/io5';
 
-const Navbar = () => {
+const Navbar = ({setOpen,open}) => {
+
     return (
         <div className='navbar'>
             <div className="logo-container">
                 <FaRegUser className='logo-icon' />
                 <span>User</span>
+            </div>
+            
+            <div className="navbars">
+                {
+                   !open ? <FaBars onClick={() => setOpen(true)} /> :  <IoClose  onClick={() => setOpen(false)} />
+                }
             </div>
             <div className="icons">
                 <IoIosSearch className='search-icon' />

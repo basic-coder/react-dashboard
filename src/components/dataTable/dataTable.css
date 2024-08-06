@@ -1,0 +1,23 @@
+.data-grid{
+    background: #fff;
+    padding: 20px;
+}
+
+.data-grid .MuiDataGrid-toolbarContainer{
+    flex-direction: row-reverse;
+}
+
+.data-grid img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.data-grid .delete-icon{
+    margin-left: 20px;
+    color: red;
+}
+
+.data-grid .edit-icon{
+    color: green;
+}
