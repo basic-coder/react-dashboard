@@ -157,7 +157,7 @@ const Users = () => {
     <div className='users'>
       <div className="info">
         <h1>Users</h1>
-        <button onClick={() => setOpen(true)}>Add User</button>
+        <button>Add User</button>
       </div>
       <DataTable columns ={ columns} slug='/users' rows ={rows}/>
       {open && <AddPopup setOpen={setOpen} slug='/users' />}
